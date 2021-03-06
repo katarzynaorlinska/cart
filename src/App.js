@@ -21,7 +21,11 @@ function App() {
   } = useCartLogic();
 
   if (isProceed === true) {
-    return <span>Your order has been submitted successfully</span>;
+    return (
+      <span className="success">
+        Your order has been submitted successfully
+      </span>
+    );
   }
 
   return (

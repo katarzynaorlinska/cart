@@ -1,0 +1,22 @@
+.App {
+  display: flex;
+  margin: 50px auto;
+  justify-content: space-between;
+  width: 80vw;
+}
+
+.success {
+  display: block;
+  border: 1px solid green;
+  margin: 150px auto;
+  width: 40vw;
+  text-align: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .App {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}

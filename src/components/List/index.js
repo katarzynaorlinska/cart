@@ -1,4 +1,5 @@
 import Product from "../Product";
+import "./list.css";
 
 function List(props) {
   const {
@@ -12,12 +13,12 @@ function List(props) {
 
   return (
     <div className="list">
-      <p>Shopping Cart</p>
+      <p className="list__title">Shopping Cart</p>
       <div className="list__container">
         <div className="list__container--title">
-          <div>Product Name</div>
-          <div>Unit Price</div>
-          <div>Qty</div>
+          <div className="list__container--content">Product Name</div>
+          <div className="list__container--content">Unit Price</div>
+          <div className="list__container--content">Qty</div>
         </div>
         <div className="list__product">
           {cart.map((cartElement) => (
@@ -32,8 +33,12 @@ function List(props) {
             ></Product>
           ))}
         </div>
-        <button>Update shopping cart</button>
-        <div></div>
+
+        <div className="list__submit">
+          <button className="list__button" onClick={updateVisibleCartData}>
+            Update shopping cart
+          </button>
+        </div>
       </div>
     </div>
   );
