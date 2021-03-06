@@ -1,7 +1,14 @@
 import Product from "../Product";
 
 function List(props) {
-  const { products, cart, addMoreProducts, addLessProducts } = props;
+  const {
+    products,
+    cart,
+    addMoreProducts,
+    addLessProducts,
+    updateVisibleCartData,
+    removeProduct,
+  } = props;
 
   return (
     <div className="list">
@@ -20,9 +27,12 @@ function List(props) {
               product={products.find((x) => x.id === cartElement.productId)}
               addMoreProducts={addMoreProducts}
               addLessProducts={addLessProducts}
+              updateVisibleCartData={updateVisibleCartData}
+              removeProduct={removeProduct}
             ></Product>
           ))}
         </div>
+        <button>Update shopping cart</button>
         <div></div>
       </div>
     </div>
